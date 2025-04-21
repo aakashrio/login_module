@@ -1,13 +1,13 @@
 # Getting Started with Create React App
 
-This project was create login page using react.
-It bulid for testing purpose not connected with server
-temp mail : test@example.com
-temp pass : 1234
+This project was create login page using react.\
+It bulid for testing purpose not connected with server.\
+temp mail : test@example.com\
+temp pass : 1234\
 
 ## addtional libarys 
-we use [mdbootstrap](https://mdbootstrap.com/) for UI
-we use [sweetalert2](https://sweetalert2.github.io/) for pop-up
+we use [mdbootstrap](https://mdbootstrap.com/) for UI\
+we use [sweetalert2](https://sweetalert2.github.io/) for pop-up\
 
 
 ## Available Scripts
