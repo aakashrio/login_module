@@ -4,9 +4,8 @@ import Signup from "./Components/signup";
 import Forgot from "./Components/forgot_password";
 import Home from "./Components/home";
 import { useState } from 'react';
-import {BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import {MDBBtn , MDBIcon} from 'mdb-react-ui-kit';
-import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
   const [userData, setUserData] = useState(() => {
