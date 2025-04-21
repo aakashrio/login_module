@@ -54,7 +54,7 @@ function ForgotPassword() {
         const result = await emailjs.send(
           process.env.REACT_APP_SERVICE_ID,
           process.env.REACT_APP_TEMPLATE_ID,
-          { email: email,link:"https://aakashrio.github.io/login_module/change-password" },
+          { email: email,link:"https://aakashrio.github.io/login_module/#/change-password" },
           process.env.REACT_APP_PUBLIC_ID
         )
       
