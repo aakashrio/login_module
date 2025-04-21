@@ -11,7 +11,6 @@ function Login({ onLogin }) {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     if (!email || !password) {
       Swal.fire({
         icon: 'warning',

@@ -2,10 +2,11 @@ import './App.css';
 import Login from "./Components/login";
 import Signup from "./Components/signup";
 import Forgot from "./Components/forgot_password";
+import ChangePassword from './Components/changepassword';
 import Home from "./Components/home";
 import { useState } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import {MDBBtn , MDBIcon} from 'mdb-react-ui-kit';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 function App() {
   const [userData, setUserData] = useState(() => {
@@ -27,39 +28,18 @@ function App() {
           {isLoggedIn && (
             <div className="userinfo-container d-flex justify-content-center align-items-center flex-column" style={{ padding: "1rem" }}>
               <span>Welcome {userData.name}</span>
-              <MDBBtn className='m-2'onClick={handleLogout} style={{ marginLeft: "10px" }}>Logout  <MDBIcon  className='ms-2'fas icon="sign-out-alt" /></MDBBtn>
+              <MDBBtn className='m-2' onClick={handleLogout} style={{ marginLeft: "10px" }}>
+                Logout <MDBIcon className='ms-2' fas icon="sign-out-alt" />
+              </MDBBtn>
             </div>
           )}
           <Routes>
-            <Route
-              path="/login"
-              element={
-                isLoggedIn ? (
-                  <Navigate to="/home" />
-                ) : (
-                  <Login onLogin={setUserData} />
-                )
-              }
-            />
-            <Route
-              path="/signup"
-              element={
-                isLoggedIn ? (
-                  <Navigate to="/home" />
-                ) : (
-                  <Signup onSignup={setUserData} />
-                )
-              }
-            />
+            <Route path="/login" element={isLoggedIn ? <Navigate to="/home" /> : <Login onLogin={setUserData} />} />
+            <Route path="/signup" element={isLoggedIn ? <Navigate to="/home" /> : <Signup onSignup={setUserData} />} />
             <Route path="/forgot-password" element={<Forgot />} />
-            <Route
-              path="/home"
-              element={isLoggedIn ? <Home /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="*"
-              element={<Navigate to={isLoggedIn ? "/home" : "/login"} />}
-            />
+            <Route path="/change-password" element={<ChangePassword />} />
+            <Route path="/home" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
+            <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
           </Routes>
         </div>
       </Router>
