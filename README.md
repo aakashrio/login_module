@@ -3,7 +3,7 @@
 This project was create login page using react.\
 It bulid for testing purpose not connected with server.\
 temp mail : test@example.com\
-temp pass : 1234\
+temp pass : 1234
 
 ## addtional libarys 
 we use [mdbootstrap](https://mdbootstrap.com/) for UI\
