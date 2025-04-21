@@ -7,7 +7,7 @@ temp pass : 1234
 
 ## addtional libarys 
 we use [mdbootstrap](https://mdbootstrap.com/) for UI\
-we use [sweetalert2](https://sweetalert2.github.io/) for pop-up\
+we use [sweetalert2](https://sweetalert2.github.io/) for pop-up
 
 
 ## Available Scripts
